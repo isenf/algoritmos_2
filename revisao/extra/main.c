@@ -6,19 +6,11 @@ valores e apresente a média na tela.
 #include <stdio.h>
 #include <locale.h>
 
-float lerA(){
+float ler(){
     float a;
     printf("Digite um valor a: ");
     scanf("%f", &a);
     return a;
-}
-
-
-float lerB(){
-    float b;
-    printf("Digite um valor b: ");
-    scanf("%f", &b);
-    return b;
 }
 
 float calcMedia(float a, float b){
@@ -32,11 +24,11 @@ void imprime(float a, float b, float media){
 
 void main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
-    
+
     float a, b, media;
 
-    a = lerA();
-    b = lerB();
+    a = ler();
+    b = ler();
     media = calcMedia(a, b);
 
     imprime(a, b, media);
