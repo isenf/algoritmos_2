@@ -8,7 +8,7 @@ valores e apresente a média na tela.
 
 float ler(){
     float a;
-    printf("Digite um valor a: ");
+    printf("Digite um valor: ");
     scanf("%f", &a);
     return a;
 }
