@@ -13,3 +13,7 @@
 13.	é exibido -294967296, pois 4000000000 não cabe em signed int, usar %d (ou %i) no printf significaria dizer que é número inteiro com sinal. 4 bilhões ainda está dentro do intervalo de unsigned int dos inteiros de 4 bytes, então para esse número ser exibido corretamente no printf só seria necessário mudar para %u (de unsigned)
 14.	é exibido 5032704, porque 4,3 bilhões está fora do intervalo de unsigned int de 4 bytes, não dá para apenas declarar como int e usar %u. No meu compilador unsiged long int tem 4 bytes então precisei declarar como unsigned long long int e usar %llu para conseguir exibir
 15.	é exibido 2000000000 e pode usar %d (ou %i) ou %u, não faz diferença
+16. é exibido 4000000000 se usar %u. Se for usado %d ou %i será impresso outro valor, pois o printf tentará converter um numero unsigned int em um numero com sinal
+17. o valor exibido depende do que for utilizado no printf e de como a variável declarada. Se for utilizado %u, %d ou %i e declarada como unsigned int, o valor será 4200768. A forma correta de se exibir seria declarando como long long int ou unsigned long long int e usando, respectivamente, %llu e %lld (ou %lli), isso se o seu long int tem 4 bytes assim como o meu
+18. 8 bytes
+19. no padrão IEEE 754 um double de 64 bits é dividido por 1 bit de sinal, 11 bits de expoente (expoente maximo: 1024) e 52 bits de mantissa (53 com o bit implicito). Seriam então 2^64 valores diferentes a ser representado
