@@ -1,0 +1,19 @@
+1-Quantos valores diferentes 1 bit pode representar?
+2-Quantos valores diferentes 2 bits podem representar?
+3-Quantos valores diferentes 8 bits podem representar?
+4-Qual a conta devemos fazer para calcular quantos valores x bits podem representar?
+5-Quantos bits tem 1 byte?
+6-Quantos bits tem 4 bytes?
+7-Quantos valores diferentes podemos representar com 1 byte?
+8-Quantos valores diferentes podemos representar com 4 bytes?
+9-Qual a conta devemos fazer para calcular quantos valores x bytes podem representar?
+10-Quantos bytes tem uma variável do tipo int?
+11-Quantos valores diferentes podemos representar com uma variável do tipo inteiro?
+12-Declare uma variável do tipo inteiro e atribua o valor 2000000000. Ao imprimir este valor, o que é apresentado? Por quê?
+13-Declare uma variável do tipo inteiro e atribua o valor 4000000000. Ao imprimir este valor, o que é apresentado? Por quê?
+14-Declare uma variável do tipo inteiro e atribua o valor 4300000000. Ao imprimir este valor, o que é apresentado? Por quê?
+15-Declare uma variável do tipo unsigned int e atribua o valor 2000000000. Ao imprimir este valor, o que é apresentado? Por quê?
+16-Declare uma variável do tipo unsigned int e atribua o valor 4000000000. Ao imprimir este valor, o que é apresentado? Por quê?
+17-Declare uma variável do tipo unsigned int e atribua o valor 4300000000. Ao imprimir este valor, o que é apresentado? Por quê?
+18-Quantos bytes tem uma variável do tipo double?
+19-Quantos valores diferentes podemos representar com uma variável do tipo double?

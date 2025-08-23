@@ -1,0 +1,15 @@
+1.	2 valores
+2.	4 valores
+3.	256 valores
+4.	2 elevado a n, n sendo a qtd de bits
+5.	8 bits
+6.	32 bits
+7.	256 valores
+8.	4.294.967.296 valores
+9.	256 elevado a n, n sendo a qtd de bytes. ou ((2)^8)^n
+10.	4 bytes
+11.	4.294.967.296 valores
+12.	2000000000 ficou com o mesmo valor, pois não excedeu 4 bytes
+13.	é exibido -294967296, pois 4000000000 não cabe em signed int, usar %d (ou %i) no printf significaria dizer que é número inteiro com sinal. 4 bilhões ainda está dentro do intervalo de unsigned int dos inteiros de 4 bytes, então para esse número ser exibido corretamente no printf só seria necessário mudar para %u (de unsigned)
+14.	é exibido 5032704, porque 4,3 bilhões está fora do intervalo de unsigned int de 4 bytes, não dá para apenas declarar como int e usar %u. No meu compilador unsiged long int tem 4 bytes então precisei declarar como unsigned long long int e usar %llu para conseguir exibir
+15.	é exibido 2000000000 e pode usar %d (ou %i) ou %u, não faz diferença
