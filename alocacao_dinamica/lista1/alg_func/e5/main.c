@@ -36,20 +36,21 @@ void ler(int *a){
     scanf("%d", a);
 }
 
-void calcular(int a, int *i){
-    *i = 2025 - a;
+void calcular(int *a, int *i){
+    *i = 2025 - *a;
 }
 
-void apresentar(int i){
-    printf("\n\nIdade: %d", i);
+void apresentar(int *i){
+    printf("\n\nIdade: %d", *i);
 }
 
 void main(){
     int *pa, *pi;
-    pa = pi = (int*)(malloc(sizeof(int)));
+    pa =  (int*)(malloc(sizeof(int)));
+    pi = (int*)(malloc(sizeof(int)));
     ler(pa);
-    calcular(*pa, pi);
-    apresentar(*pi);
+    calcular(pa, pi);
+    apresentar(pi);
     free(pa);
     free(pi);
 }

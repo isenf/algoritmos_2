@@ -17,14 +17,14 @@ int main(int argc, char** argv) {
 #include <stdio.h>
 #include <stdlib.h>
 
-void apresentar(int b){
-    printf("Valor: %d",b);
+void apresentar(int *b){
+    printf("Valor: %d", *b);
 }
 
 void main(){
     int *p;
     p = (int*)(malloc(sizeof(int)));
     *p = 4;
-    apresentar(*p);
+    apresentar(p);
     free(p);
 }
