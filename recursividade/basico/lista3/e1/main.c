@@ -1,34 +1,56 @@
 /*
-Considere o código a seguir:
+Transforme os laços em funções recursivas:
 
-int x;
+1-
+
+int x,y;
+
+printf("\nJogo da adivinhacao!");
+
+printf("\nJogador 1, escolha um numero:");
+
 scanf("%d",&x);
-for(int i=0;i<x;i++){
-printf("\nQue legal! Estou em loop!");
-printf("\nE dá-lhe %d",x);
-}
 
-Transforme este código em uma função recursiva, eliminando o laço FOR.
+system("CLS");//<-Esta linha só funciona se der include de stdlib.h.
+
+//Se continuar dando problema de compilação, remova-a.
+
+do{
+
+    printf("\nJogador 2, digite um numero:");
+
+    scanf("%d",&y);
+
+}while(x!=y);
+
+printf("\nParabens!!! Voce adivinhou o numero digitado pelo jogador 1!!!");
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-void loop(int i, int x){
-    if(i < x){
-        printf("\nQue legal! Estou em loop");
-        printf("\nE dá-lhe %d\n", i);
+void loop(int y, int x){
+    printf("\nJogador 2, digite um numero: ");
+    scanf("%d",&y);
 
-        loop(++i, x);
+    if(y != x){
+        loop(y, x);
     }
 }
 
 void main(){
-    int x, i = 0;
+    int x, y;
 
-    printf("Insira um número: ");
+    printf("\nJogo da adivinhacao!");
+    printf("\nJogador 1, escolha um numero: ");
+
     scanf("%d", &x);
 
-    loop(i, x);
+    system("CLS"); 
+
+    loop(y, x);
+
+    printf("\n\nParabens!!! Voce adivinhou o numero digitado pelo jogador 1!!!");
 
 
 }

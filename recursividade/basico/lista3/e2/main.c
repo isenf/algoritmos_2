@@ -1,32 +1,45 @@
 /*
-Transforme este código em uma função recursiva, eliminando o laço FOR:
+int a;
 
-Escreva um algoritmo que leia 6 valores, um de cada vez, e conte quantos destes
-valores são pares. No fim do programa, deve ser apresentada a quantidade de
-números pares. Use laço FOR.
+printf("\nDigite um numero");
+
+scanf("%d", &a);
+
+while(a<8){
+    if(a%2==0)
+        printf("\n%d = par", a);
+    else
+        printf("\n%d = impar",a);
+}
 */
 
 #include <stdio.h>
 
-#define TAM 6
+#define NUM 8
 
-void loopFor(int numeros[], int *par){
-    for(int i = 0; i< TAM; i++){
-        printf("Insira o %dº número: ", i + 1);
-        scanf("%d", &numeros[i]);
-
-        if(numeros[i] % 2 == 0){
-            (*par)++;
+void loop(int a){
+    if(a < 8){
+        if(a%2==0){
+            printf("\n%d = par", a);
+        }
+        else{
+            printf("\n%d = impar", a);
         }
 
+        printf("\nDigite um numero: ");
+        scanf("%d", &a);
+
+        loop(a);
     }
+    
 }
 
 void main(){
-    int numeros[TAM], par = 0;
+    int a;
 
-    loopFor(numeros, &par);
+    printf("\nDigite um numero: ");
+    scanf("%d", &a);
 
-    printf("\n\n\n\n\n%d números pares", par);
+    loop(a);
 }
 
