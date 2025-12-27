@@ -29,7 +29,7 @@ void main(){
 
     ele = 6;
 
-    res = fibboVR1(1, 1, 3, 6);
+    res = fibboVR1(1, 1, 3, ele);
 
     printf("O elemento %d na sequencia = %lld\n", ele, res);
 	printf("Qtd de execucoes: %lld\n", count);

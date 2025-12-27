@@ -28,7 +28,7 @@ void main(){
 
     ele = 6;
 
-    res = fibboNR(6);
+    res = fibboNR(ele);
 
     printf("\nO elemento %d na sequencia = %lld",ele, res);
 	printf("\nQtd de execucoes: %lld", count);
